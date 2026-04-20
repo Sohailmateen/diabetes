@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
+from pathlib import Path
 # from sklearn.base import BaseEstimator, TransformerMixin
 
 # # --- PASTE THE CUSTOM CLASS HERE ---
@@ -21,7 +22,9 @@ import joblib
 # Make sure 'diabetes_production_model.pkl' is in the same folder as this script
 @st.cache_resource
 def load_model():
-    return joblib.load('diabetes_production_model.pkl')
+    BASE_DIR = Path(__file__).resolve().parent
+    model_path = BASE_DIR / "models" / "diabetes_production_model.pkl"
+    return joblib.load(model_path)
 
 model = load_model()
 
