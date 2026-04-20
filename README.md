@@ -35,7 +35,7 @@ diabetes-prediction-project/
 1. **Clone the repository:**
 
    ```bash
-   git clone <https://github.com/Sohailmateen/diabetes.git>
+   git clone https://github.com/Sohailmateen/diabetes.git
    cd diabetes-prediction-project
    ```
 2. **Create a virtual environment (Recommended):**
